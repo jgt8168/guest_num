@@ -5,13 +5,17 @@
 
 import random
 ans=random.randint(1,100)
+count=0
 while True:
+    count+=1
     re=int(input("請輸入數字："))
+    
     if re==ans:
         print("終於猜對了")
+        print("猜第",count,"次")
         break
+    elif re< ans:
+        print("比答案小")
     else:
-        if re< ans:
-            print("比答案小")
-        else:
-            print("比答案大")
+        print("比答案大")
+    print("猜第",count,"次")
